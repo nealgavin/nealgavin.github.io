@@ -1,0 +1,597 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>MarkDown语法 | Neal Gavin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="nealgavin">
+    
+    <meta name="description" content="#基本概念#MarkDown的目标是实现易读易写，高逼格。像非前端专业人员，总是想着能够用简单的方式来达到前端专业的的展现水准，也就是所谓的Text-&amp;gt;HTML的映射关系。令人欣慰的是MarkDown就是这样的一种语言。用 MarkDown可以 简洁，大方，优雅的完成这一功能。
+MarkDown的语法全是由一些符号组成的，这些符号都是精挑细选的，作用一目了然。让使用者可以将精力全部放在内容上，而不用过于关注内容布局。不过MarkDown并不是HTML的替代品，它只是为HTML的某些常用功能作了简化而已。在 MarkDown中你可以插入HTML代码。 MarkDown的原理其实就是对它自己定义的类型进行映射其余的原封不动。所以只要学会常用的映射方式就好了。eg:&amp;lt;table&amp;gt;
+    &amp;lt;tr&amp;gt;
+        &amp;lt;td&amp;gt;Neal Gavin&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;这代码的效果如下：
+Neal Gavin">
+    
+    
+    <meta name="description" content="#基本概念#MarkDown的目标是实现易读易写，高逼格。像非前端专业人员，总是想着能够用简单的方式来达到前端专业的的展现水准，也就是所谓的Text-&amp;gt;HTML的映射关系。令人欣慰的是MarkDown就是这样的一种语言。用 MarkDown可以 简洁，大方，优雅的完成这一功能。
+MarkDown的语法全是由一些符号组成的，这些符号都是精挑细选的，作用一目了然。让使用者可以将精力全部放在内容上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MarkDown语法">
+<meta property="og:url" content="http://nealgavin.github.io/2015/01/23/MarkDown/index.html">
+<meta property="og:site_name" content="Neal Gavin">
+<meta property="og:description" content="#基本概念#MarkDown的目标是实现易读易写，高逼格。像非前端专业人员，总是想着能够用简单的方式来达到前端专业的的展现水准，也就是所谓的Text-&amp;gt;HTML的映射关系。令人欣慰的是MarkDown就是这样的一种语言。用 MarkDown可以 简洁，大方，优雅的完成这一功能。
+MarkDown的语法全是由一些符号组成的，这些符号都是精挑细选的，作用一目了然。让使用者可以将精力全部放在内容上">
+<meta property="og:updated_time" content="2015-08-15T03:42:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MarkDown语法">
+<meta name="twitter:description" content="#基本概念#MarkDown的目标是实现易读易写，高逼格。像非前端专业人员，总是想着能够用简单的方式来达到前端专业的的展现水准，也就是所谓的Text-&amp;gt;HTML的映射关系。令人欣慰的是MarkDown就是这样的一种语言。用 MarkDown可以 简洁，大方，优雅的完成这一功能。
+MarkDown的语法全是由一些符号组成的，这些符号都是精挑细选的，作用一目了然。让使用者可以将精力全部放在内容上">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Neal Gavin" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/eagle.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/eagle.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a86ba32c52a8b929a80f9dddfa974266";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/eagle.png" alt="Neal Gavin" title="Neal Gavin"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Neal Gavin">Neal Gavin</a></h1>
+				<h2 class="blog-motto">Keep on going! Believe in yourself!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+						<li><a href="/Lab">Lab</a></li>
+					
+					<li>
+					
+					
+
+
+
+
+           <form class="search">
+    <input type="text" id="st-search-input" maxlength="20" placeholder="Search" autocomplete="off" autocorrect="off" autocapitalize="off" style="outline: none;" class="st-default-search-input">
+    </form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','zTysGmgYkKSfMXshmpzH','2.0.0');
+</script>
+
+
+
+ 					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/01/23/MarkDown/" title="MarkDown语法" itemprop="url">MarkDown语法</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://nealgavin.github.io/about" title="nealgavin" target="_blank" itemprop="author">nealgavin</a>
+		
+  <p class="article-time">
+    <time datetime="2015-01-23T07:46:54.000Z" itemprop="datePublished"> 发表于 Jan 23 2015</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>#基本概念#<br><strong>MarkDown</strong>的目标是实现易读易写，高逼格。<br>像非前端专业人员，总是想着能够用简单的方式来达到前端专业的的展现水准，也就是所谓的<code>Text-&gt;HTML</code>的映射关系。令人欣慰的是<strong>MarkDown</strong>就是这样的一种语言。用 <strong>MarkDown</strong>可以 简洁，大方，优雅的完成这一功能。</p>
+<p><strong>MarkDown</strong>的语法全是由一些符号组成的，这些符号都是精挑细选的，作用一目了然。让使用者可以将精力全部放在内容上，而不用过于关注内容布局。不过<strong>MarkDown</strong>并不是HTML的替代品，它只是为HTML的某些常用功能作了简化而已。在 <strong>MarkDown</strong>中你可以插入HTML代码。 <strong>MarkDown</strong>的原理其实就是对它自己定义的类型进行映射其余的原封不动。所以只要学会常用的映射方式就好了。<br>eg:<br><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Neal Gavin&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code><br>这代码的效果如下：</p>
+<p><table><tr><td>Neal Gavin</td></tr></table><br><a id="more"></a></p>
+<p>##特殊字符自动转换<br>HTML中<code>&lt;</code>和<code>&amp;</code>是特殊字符.<code>&lt;</code>：用事标签起始，<code>&amp;</code>：标记HTML实体<br>如果要显示这些字符，就需要使用实体青工表示<code>&amp;lt;</code>-&gt;’&lt;’ <code>&amp;amp</code>-&gt;’&amp;’.<br>不过MarkDown可以帮你搞定，你只要写符号就好了。<br>你要写<code>1&lt;2</code> MarkDown会把它映射成<code>1 &amp;lt; 2</code></p>
+<p>#区块元素<br>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行.也就是可以用两个换行来划分一个段落。也可以使用<code>&lt;\br&gt;</code></p>
+<p>##标题<br>标题支持两种格式，类 Setext 形式是用底线的形式，利用 = （最高阶标题）和-（第二阶标题），例如：</p>
+<p>Markdown 支持两种标题的语法，类 [Setext] [1] 和类 [atx] [2] 形式。</p>
+<p>类 Setext 形式是用底线的形式，利用 <code>=</code> （最高阶标题）和 <code>-</code> （第二阶标题），例如： </p>
+<pre><code><span class="header"> H1
+=============</span>
+
+<span class="header"> H2
+-------------</span>
+</code></pre><p>也可以是这样</p>
+<pre><code><span class="preprocessor"># H1</span>
+<span class="preprocessor">## H2</span>
+...
+</code></pre><p>##区块引用<br>引用使用的是<code>&gt;</code></p>
+<pre><code>&gt;这就是引用
+&gt;引用
+</code></pre><p>效果：</p>
+<blockquote>
+<p>这就是引用<br>引用</p>
+</blockquote>
+<p>区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 <code>&gt;</code> ：</p>
+<pre><code>&gt; This <span class="keyword">is</span> <span class="keyword">the</span> <span class="keyword">first</span> level <span class="keyword">of</span> quoting.
+&gt;
+&gt; &gt; This <span class="keyword">is</span> nested blockquote.
+&gt;
+&gt; Back <span class="keyword">to</span> <span class="keyword">the</span> <span class="keyword">first</span> level.
+</code></pre><p>引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：</p>
+<pre><code>&gt; <span class="comment">## 这是一个标题。</span>
+&gt; 
+&gt; <span class="number">1</span>.   这是第一行列表项。
+&gt; <span class="number">2</span>.   这是第二行列表项。
+&gt; 
+&gt; 给出一些例子代码：
+&gt; 
+&gt;     <span class="built_in">return</span> shell_<span class="built_in">exec</span>(<span class="string">"echo <span class="variable">$input</span> | <span class="variable">$markdown_script</span>"</span>);
+</code></pre><p>任何像样的文本编辑器都能轻松地建立 email 型的引用。例如在 BBEdit 中，你可以选取文字后然后从选单中选择<em>增加引用阶层</em>。</p>
+<p>##列表<br>无序列表用<code>*</code>.</p>
+<pre><code><span class="bullet">* </span>Red
+<span class="bullet">* </span>Black
+</code></pre><p>效果：</p>
+<ul>
+<li>Red</li>
+<li>Black</li>
+</ul>
+<p>有序用数字</p>
+<pre><code><span class="number">1.</span> Red
+<span class="number">2.</span> Black
+</code></pre><ol>
+<li>Red</li>
+<li><p>Black</p>
+<ul>
+<li>Read</li>
+<li>sdf</li>
+<li>sdf</li>
+</ul>
+</li>
+</ol>
+<p>##代码区块<br>代码区块很简单，缩进4个空格或一个制表。</p>
+<pre><code>这是一个普通的代码区块
+</code></pre><p>##分隔线<br>多个<code>********</code>形成分隔线，如下：</p>
+<hr>
+<p>#区段元素</p>
+<p>##链接<br><strong>MarkDown</strong>支持两种形式</p>
+<ol>
+<li>行内式：<br><code>[内容](链接“这个是Title可不加”)</code></li>
+<li>参考式：<br><code>[内容][标记]</code> 这个需要在页面的其它地方用<code>[标记]：内容来表示</code><br>链接内容定义的形式为：</li>
+</ol>
+<ul>
+<li>方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字</li>
+<li>接着一个冒号</li>
+<li>接着一个以上的空格或制表符</li>
+<li>接着链接的网址</li>
+<li>选择性地接着 title 内容，可以用单引号、双引号或是括弧包着</li>
+</ul>
+<p>##强调</p>
+<p><strong>MarkDown</strong> 使用<code>*</code>或<code>_</code>来标记强调词的符号，如果用两个就会被作为<code>&lt;strong&gt;</code></p>
+<p>##代码<br>小段代码用`` 反引号把它包起来。</p>
+<p>##图片<br>用<code>![内容]（链接）&quot;标题，可省&quot;</code><br>详细叙述如下：</p>
+<ul>
+<li>一个惊叹号 !</li>
+<li>接着一个方括号，里面放上图片的替代文字</li>
+<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 ‘title’ 文字。</li>
+</ul>
+<p>###自动链接<br><code>&lt;url&gt;</code></p>
+<p>##反斜杠<br><strong>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号</strong><br><code>\*test\*</code></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/编程/">编程</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/MarkDown/">MarkDown</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://nealgavin.github.io/2015/01/23/MarkDown/" data-title="MarkDown语法 | Neal Gavin" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/02/02/awk-introduce/" title="awk使用介绍">
+  <strong>上一篇：</strong><br/>
+  <span>
+  awk使用介绍</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/01/22/博客开拍/"  title="博客开拍">
+ <strong>下一篇：</strong><br/> 
+ <span>博客开拍
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/01/23/MarkDown/" data-title="MarkDown语法" data-url="http://nealgavin.github.io/2015/01/23/MarkDown/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/linux/" title="linux">linux<sup>2</sup></a></li>
+		
+			<li><a href="/categories/生活/" title="生活">生活<sup>4</sup></a></li>
+		
+			<li><a href="/categories/编程/" title="编程">编程<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/吐嘈/" title="吐嘈">吐嘈<sup>2</sup></a></li>
+		
+			<li><a href="/tags/DNSpod/" title="DNSpod">DNSpod<sup>1</sup></a></li>
+		
+			<li><a href="/tags/树莓派/" title="树莓派">树莓派<sup>1</sup></a></li>
+		
+			<li><a href="/tags/fight/" title="fight">fight<sup>1</sup></a></li>
+		
+			<li><a href="/tags/awk/" title="awk">awk<sup>1</sup></a></li>
+		
+			<li><a href="/tags/linux/" title="linux">linux<sup>1</sup></a></li>
+		
+			<li><a href="/tags/MarkDown/" title="MarkDown">MarkDown<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/nealgavin" target="_blank" title="my CSDN blog">my CSDN blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://darkrhythm.net" target="_blank" title="群神的blog">Pira&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Neal Gavin,working in Baidu.living in beijing. <br/>
+			This is my blog.It&#39;s my pleasure to share!</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/1273004732" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/nealgavin" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:nealgavin@126.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Pacman">Jacman</a> © 2015 
+		
+		<a href="http://nealgavin.github.io/about" target="_blank" title="nealgavin">nealgavin</a>
+		
+		</p>
+
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"nealgavin"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+  </body>
+</html>

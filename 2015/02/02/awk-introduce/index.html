@@ -1,0 +1,597 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>awk使用介绍 | Neal Gavin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="nealgavin">
+    
+    <meta name="description" content="#AWK介绍#AWK是一种优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。这种编程及数据操作语言（其名称得自于它的创始人阿尔佛雷德·艾侯、彼得·温伯格和布莱恩·柯林汉姓氏的首个字母）的最大功能取决于一个人所拥有的知识。
+##awk特点##AWK 提供了极其强大的功能：可以进行样式装入、流控制、数学运算符、进程控制语句甚至于内置的变量和函数。它具备了一个完整的语言所应具有的几乎所有精美特性。实际上 AWK 的确拥有自己的语言：AWK 程序设计语言， 三位创建者已将它正式定义为“样式扫描和处理语言”。它允许您创建简短的程序，这些程序读取输入文件、为数据排序、处理数据、对输入执行计算以及生成报表，还有无数其他的功能。尽管操作可能会很复杂，但命令的语法始终是：awk &amp;#39;{pattern + action}&amp;#39; 或者 awk &amp;#39;pattern {action}&amp;#39;其中 pattern 表示 AWK 在数据中查找的内容，而 action 是在找到匹配内容时所执行的一系列命令。花括号 ({}) 不需要在程序中始终出现，但它们用于根据特定的模式对一系列指令进行分组。">
+    
+    
+    <meta name="description" content="#AWK介绍#AWK是一种优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。这种编程及数据操作语言（其名称得自于它的创始人阿尔佛雷德·艾侯、彼得·温伯格和布莱恩·柯林汉姓氏的首个字母）的最大功能取决于一个人所拥有的知识。
+##awk特点##AWK 提供了极其强大的功能：可以进行样式装入、流控制、数学运算符、进程控制语句甚至于内置的变量和函数。它具备了一个完整的语言所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="awk使用介绍">
+<meta property="og:url" content="http://nealgavin.github.io/2015/02/02/awk-introduce/index.html">
+<meta property="og:site_name" content="Neal Gavin">
+<meta property="og:description" content="#AWK介绍#AWK是一种优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。这种编程及数据操作语言（其名称得自于它的创始人阿尔佛雷德·艾侯、彼得·温伯格和布莱恩·柯林汉姓氏的首个字母）的最大功能取决于一个人所拥有的知识。
+##awk特点##AWK 提供了极其强大的功能：可以进行样式装入、流控制、数学运算符、进程控制语句甚至于内置的变量和函数。它具备了一个完整的语言所">
+<meta property="og:updated_time" content="2015-08-15T03:42:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="awk使用介绍">
+<meta name="twitter:description" content="#AWK介绍#AWK是一种优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。这种编程及数据操作语言（其名称得自于它的创始人阿尔佛雷德·艾侯、彼得·温伯格和布莱恩·柯林汉姓氏的首个字母）的最大功能取决于一个人所拥有的知识。
+##awk特点##AWK 提供了极其强大的功能：可以进行样式装入、流控制、数学运算符、进程控制语句甚至于内置的变量和函数。它具备了一个完整的语言所">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Neal Gavin" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/eagle.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/eagle.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a86ba32c52a8b929a80f9dddfa974266";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/eagle.png" alt="Neal Gavin" title="Neal Gavin"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Neal Gavin">Neal Gavin</a></h1>
+				<h2 class="blog-motto">Keep on going! Believe in yourself!</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+						<li><a href="/Lab">Lab</a></li>
+					
+					<li>
+					
+					
+
+
+
+
+           <form class="search">
+    <input type="text" id="st-search-input" maxlength="20" placeholder="Search" autocomplete="off" autocorrect="off" autocapitalize="off" style="outline: none;" class="st-default-search-input">
+    </form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','zTysGmgYkKSfMXshmpzH','2.0.0');
+</script>
+
+
+
+ 					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/02/02/awk-introduce/" title="awk使用介绍" itemprop="url">awk使用介绍</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="http://nealgavin.github.io/about" title="nealgavin" target="_blank" itemprop="author">nealgavin</a>
+		
+  <p class="article-time">
+    <time datetime="2015-02-02T07:22:42.000Z" itemprop="datePublished"> 发表于 Feb 2 2015</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#内置数值函数"><span class="toc-number">1.</span> <span class="toc-text">内置数值函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义函数"><span class="toc-number">2.</span> <span class="toc-text">自定义函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#awk_script的组成:"><span class="toc-number"></span> <span class="toc-text">awk_script的组成:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#awk命令的一般形式:"><span class="toc-number"></span> <span class="toc-text">awk命令的一般形式:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#awk的运行过程:"><span class="toc-number"></span> <span class="toc-text">awk的运行过程:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#action"><span class="toc-number"></span> <span class="toc-text">action</span></a>
+		
+		</div>
+		
+		<p>#AWK介绍#<br>AWK是一种优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。这种编程及数据操作语言（其名称得自于它的创始人阿尔佛雷德·艾侯、彼得·温伯格和布莱恩·柯林汉姓氏的首个字母）的最大功能取决于一个人所拥有的知识。</p>
+<p>##awk特点##<br>AWK 提供了极其强大的功能：可以进行样式装入、流控制、数学运算符、进程控制语句甚至于内置的变量和函数。它具备了一个完整的语言所应具有的几乎所有精美特性。实际上 AWK 的确拥有自己的语言：AWK 程序设计语言， 三位创建者已将它正式定义为“样式扫描和处理语言”。它允许您创建简短的程序，这些程序读取输入文件、为数据排序、处理数据、对输入执行计算以及生成报表，还有无数其他的功能。<br>尽管操作可能会很复杂，但命令的语法始终是：<br><code>awk &#39;{pattern + action}&#39;</code> 或者 <code>awk &#39;pattern {action}&#39;</code><br>其中 pattern 表示 AWK 在数据中查找的内容，而 action 是在找到匹配内容时所执行的一系列命令。花括号 ({}) 不需要在程序中始终出现，但它们用于根据特定的模式对一系列指令进行分组。<br><a id="more"></a></p>
+<p>##调用方式##<br>awk提供了适应多种需要的不同解决方案，它们是：</p>
+<pre><code>一、 awk命令行，你可以象使用普通UNIX命令一样使用awk，在命令行中你也可以使用awk程序设计语言，虽然awk支持多行的录入，但是录入长长的命令行并保证其正确无误却是一件令人头疼的事，因此，这种方法一般只用于解决简单的问题。当然，你也可以在shell script程序中引用awk命令行甚至awk程序脚本。
+
+二、使用<span class="operator">-f</span>选项调用awk程序。awk允许将一段awk程序写入一个文本文件，然后在awk命令行中用<span class="operator">-f</span>选项调用并执行这段程序。具体的方法我们将在后面的awk语法中讲到。
+
+三、利用命令解释器调用awk程序：利用UNIX支持的命令解释器功能，我们可以将一段awk程序写入文本文件，然后在它的第一行加上：
+`<span class="comment">#!/bin/awk -f`</span>
+并赋予这个文本文件以执行的权限。这样做之后，你就可以在命令行中用类似于下面这样的方式调用并执行这段awk程序了。
+</code></pre><p>##内置变量##<br>awk借用shell的方法，用1,2,3…这样的方式来顺序地表示行（记录）中的不同字段。特殊地，awk用0表示整个行（记录）。不同的字段之间是用称作分隔符的字符分隔开的。系统默认的分隔符是空格。awk允许在命令行中用-F re的形式来改变这个分隔符。事实上，awk用一个内置的变量RS来记忆这个分隔符。awk中有好几个这样的内置变量，例如，记录分隔符变量RS、当前工作的记录数NR等等，本文后面的附表列出了全部的内置变量。这些内置的变量可以在awk程序中引用或修改，例如，你可以利用NR变量在模式匹配中指定工作范围，也可以通过修改记录分隔符RS让一个特殊字符而不是换行符作为记录的分隔符。<br>例：显示文本文件myfile中第七行到第十五行中以字符%分隔的第一字段，第三字段和第七字段：<br><code>awk -F % &#39;NR&gt;=7,NR&lt;=15 {print $1 $3 $7}&#39; myfile</code></p>
+<p>###变量介绍###<br>awk提供了有很多内置变量，如果你经常使用awk处理文本，了解这些这些内置变量的使用是很有必要的。下面看一下这些内置变量的详细介绍。</p>
+<ol>
+<li>ARGC命令行参数个数（不包括awk的选项和awk的程序内容）。</li>
+</ol>
+<ul>
+<li>ARGIND 当前正在处理的ARGV中的文件的索引值（同时处理多个文件时会用到）。</li>
+<li>ARGV 命令行参数序列数组，下标从0开始。</li>
+<li>CONVFMT 数字转换格式，和C语言中的数字输出格式化类似，默认为”%.6g”。</li>
+<li>ENVIRON 当前系统的环境变量。</li>
+<li>ERRNO 出错时的错误信息。</li>
+<li>FIELDWIDTHS 以空格分隔的字段宽度，如果指定此变量，awk将会用指定的宽度替换变量FS指定的分隔符</li>
+<li>FILENAME 当前正在处理的文件名，该变量不能在BEGIN块中使用。</li>
+<li>FNR当前处理的记录号。</li>
+<li>FS 字段的分隔符，默认为空格。</li>
+<li>IGNORECASE 如果该变量设置为非0值，在进行字符串匹配时忽略大小写。</li>
+<li>NF 当前记录中的字段个数。</li>
+<li>NR 已经读出的记录数。</li>
+<li>OFMT 数字的输出格式。</li>
+<li>OFS 输出的字段分隔符，默认为空格。</li>
+<li>ORS 输出的记录分隔符，默认为新行。</li>
+<li>RS 输入记录的分隔符，默认为新行。</li>
+<li>RSTART 被match（）函数匹配的字符串的起始位置，如果没有匹配则为0（从1开始）。</li>
+<li>RLENGTH 被match（）函数匹配的字符串的长度。</li>
+<li>SUBSEP数组中多个下标的分隔符，默认为”\034”。<br>###内置函数###<br>内置的字符串函数<br><table><tr><td>函数</td><td>作用</td></tr><br><tr><td>gsub(r,s)</td><td>在整个$0中用s代替r</td></tr><br><tr><td>gsub(r,s,t)</td><td>在整个t中用s替代r</td></tr><br><tr><td>index(s,t)</td><td>返回s中字符串t的第一位置</td></tr><br><tr><td>length(s)</td><td>返回s长度</td></tr><br><tr><td>match(s,r)</td><td>测试s是否包含匹配r的字符串</td></tr><br><tr><td>split(s,a,fs)</td><td>在fs上将s分成序列a</td></tr><br><tr><td>sprint(fmt,exp)</td><td>返回经fmt格式化后的exp</td></tr><br><tr><td>sub(r,s)</td><td>用$0中最左边最长的子串代替s</td></tr><br><tr><td>substr(s,p)</td><td>返回字符串s中从p开始的后缀部分</td></tr><br><tr><td>substr(s,p,n)</td><td>返回字符串s中从p开始长度为n的后缀部分</td></tr></table><h3 id="内置数值函数">内置数值函数</h3></li>
+<li>int(x) : 求出x 的整数部份，朝向0 的方向做舍去。eg: int(3.9)是3，int(-3.9) 是-3。 </li>
+<li>sqrt(x) : 求出x 正的平方根值。eg: sqrt(4)=2 </li>
+<li>exp(x) : 求出x 的次方。eg: exp(2) 即是求e*e 。 </li>
+<li>log(x) : 求出x 的自然对数。 </li>
+<li>sin(x) : 求出x 的sine 值，x 是弪度量。 </li>
+<li>cos(x) : 求出x 的cosine 值，x 是弪度量。 </li>
+<li>atan2(y,x) :    求y/x 的arctangent 值，所求出的值其单位是弪度量。 </li>
+<li>rand() : 得到一个随机数(平均分布在0和1之间)。每次执行gawk，* rand从相同的seed生成值。 </li>
+<li>srand(x) : 设定产生随机数的seed为x。如果在第二次运行awk程序时你设定相同的seed值，你将再度得到相同序列的随机数。如果省略引数x，例如srand()，则当前日期时间会被当成seed。这个方法可使得随机数值是真正不可预测的。 </li>
+<li><p>srand() : 其值是当次awk_script运行过程中前次srand(x)的设定的seed值x,。 </p>
+<h3 id="自定义函数">自定义函数</h3><p>复杂的awk常常可以使用自己定义的函数来简化。调用自定义的函数与调用内置函数的方法一样。 </p>
+</li>
+<li><p>1) 自定义函数定义的格式: 自定义函数可以在awk程序的任何地方定义。<br><code>function fun_name (parameter_list) {    // parameter_list是以逗号分隔的参数列表 
+body-of-function    // 函数体，是awk语句块 
+}</code> </p>
+</li>
+<li>2) 举例:<br><code>awk &#39;{ print &quot;sum =&quot;,SquareSum($1,$2) } 
+function SquareSum(x,y) { sum=x*x+y*y ; return sum } &#39; grade.txt</code><br>#使用#<h2 id="awk_script的组成:">awk_script的组成:</h2></li>
+<li>① awk_script可以由一条或多条awk_cmd组成，两条awk_cmd之间一般以NEWLINE分隔 </li>
+<li>② awk_cmd由两部分组成: awk_pattern { actions } </li>
+<li>③ awk_script可以被分成多行书写，必须确保整个awk_script被单引号括起来。 <h2 id="awk命令的一般形式:">awk命令的一般形式:</h2><code>awk &#39; BEGIN { actions } 
+awk_pattern1 { actions } 
+............ 
+awk_patternN { actions } 
+END { actions } 
+&#39; inputfile</code><br>其中 BEGIN { actions } 和 END { actions } 是可选的。 <h2 id="awk的运行过程:">awk的运行过程:</h2></li>
+<li>① 如果BEGIN 区块存在，awk执行它指定的actions。 </li>
+<li>② awk从输入文件中读取一行，称为一条输入记录。(如果输入文件省略，将从标准输入读取) </li>
+<li>③ awk将读入的记录分割成字段，将第1个字段放入变量$1中，第2个字段放入$2，以此类推。$0表示整条记录。字段分隔符使用shell环境变量IFS或由参数指定。 </li>
+<li>④ 把当前输入记录依次与每一个awk_cmd中awk_pattern比较，看是否匹配，如果相匹配，就执行对应的actions。如果不匹配，就跳过对应的actions，直到比较完所有的awk_cmd。 </li>
+<li>⑤ 当一条输入记录比较了所有的awk_cmd后，awk读取输入的下一行，继续重复步骤③和④，这个过程一直持续，直到awk读取到文件尾。 </li>
+<li>⑥ 当awk读完所有的输入行后，如果存在END，就执行相应的actions。 </li>
+</ul>
+<p>##awk Pattern ##<br>awk_pattern模式部分决定actions动作部分何时触发及触发actions。awk_pattern可以是以下几种类型: </p>
+<p>###1) 正则表达式用作<code>awk_pattern: /regexp/</code> ### </p>
+<ul>
+<li>① awk中正则表达式匹配操作中经常用到的字符:<br>^ $ . [] | () * // 通用的regexp元字符<br>+ : 匹配其前的单个字符一次以上，是awk自有的元字符，不适用于grep或sed等<br>? : 匹配其前的单个字符1次或0次，是awk自有的元字符，不适用于grep或sed等 </li>
+<li>② 举例:<br><code>awk &#39;/ *$0.[0-9][0-9].*/&#39; input_file</code><br>###2) 布尔表达式用作awk_pattern，表达式成立时，触发相应的actions执行。 ###</li>
+<li>① 表达式中可以使用变量(如字段变量$1,$2等)和/regexp/ </li>
+<li>② 布尔表达式中的操作符:<br>关系操作符: &lt; &gt; &lt;= &gt;= == !=<br>匹配操作符: value ~ /regexp/ 如果value匹配/regexp/，则返回真<br>value !~ /regexp/ 如果value不匹配/regexp/，则返回真<br>举例: <code>awk &#39;$2 &gt; 10 {print &quot;ok&quot;}&#39; input_file</code><br><code>awk &#39;$3 ~ /^d/ {print &quot;ok&quot;}&#39; input_file</code> </li>
+<li>③ &amp;&amp;(与) 和 ||(或) 可以连接两个/regexp/或者布尔表达式，构成混合表达式。!(非) 可以用于布尔表达式或者/regexp/之前。<br>举例: <code>awk &#39;($1 &lt; 10 ) &amp;&amp; ($2 &gt; 10) {print &quot;ok&quot;}&#39; input_file</code><br><code>awk &#39;/^d/ || /x$/ {print &quot;ok&quot;}&#39; input_file</code> </li>
+<li>④ 其它表达式用作awk_script，如赋值表达式等<br>eg: <code>awk &#39;(tot+=$6); END{print &quot;total points :&quot; tot }&#39; input_file</code>// 分号不能省略<br><code>awk &#39;tot+=$6 {print $0} END{print &quot;total points :&quot; tot }&#39; input_file</code>// 与上面等效 <h2 id="action">action</h2>actions就是对awk读取的记录数据进行的操作。actions由一条或多条语句或者命令组成，语句、命令之间用分号(;)分隔。actions中还可以使用流程控制结构的语句。<br>###1) awk的命令: ###</li>
+<li>① print 参数列表 : print可以打印字符串(加双引号)、变量和表达式，是awk最基本的命令。参数列表要用逗号(,)分隔，如果参数间用空格分隔，打印出时参数值之间不会有空格。 </li>
+<li>② printf ([格式控制符]，参数) : 格式化打印命令(函数)，语法与C语言的printf函数类似。 </li>
+<li>③ next : 强迫awk立刻停止处理当前的记录,而开始读取和处理下一条记录。 </li>
+<li>④ nextfile : 强迫awk立刻停止处理当前的输入文件而处理输入文件列表中的下一个文件 </li>
+<li>⑤ exit : 使awk停止执行而跳出。如果有END 存在，awk会去执行END 的actions。 </li>
+</ul>
+<p>###2) awk的语句: awk的语句主要是赋值语句，用来给变量赋值。 ###</p>
+<ul>
+<li>① 把直接值或一个变量值赋值给变量。如果直接值是字符串要加双引号。<br>举例: <code>awk &#39;BEGIN {x=1 ; y=3 ; x=y ; print &quot;x=&quot; x &quot; ; y=&quot; y }&#39;</code> </li>
+<li>② 把一个表达式的值赋值给变量。表达式一般是数值表达式，也可以是其它表达式。<br>数值表达式: <code>num1 operator num2</code><br>operator可以是: +(加) -(减) *(乘) /(除) %(取模) ^(求幂)<br>当num1或者num2是字符串而是不是数字时，无论是否加有双引号，awk都视其值为0<br>条件选择表达式: A?B:C (A为布尔表达式，B和C可以是表达式或者直接值)<br>当布尔表达式A的值为真时，整个表达式的值为B，A的值为假时，整个表达式的值为C<br>举例: <code>awk &#39;BEGIN {x=3 ; x+=2 ; y=x+2 ; print &quot;x=&quot; x &quot; ; y=&quot; y }&#39;</code><br><code>awk &#39;BEGIN {x=3 ; y=x&gt;4?&quot;ok&quot;:4 ; print &quot;x=&quot; x &quot; ; y=&quot; y }&#39;</code> </li>
+<li>③ 为了方便书写，awk也支持C语言语法的赋值操作符: += -= *= /= %= ^= ++ – </li>
+</ul>
+<p>###3) 流程控制结构 (基本上是使用C语言的语法) ###<br>其中condition一般为布尔表达式，body和else-body是awk语句块。 </p>
+<ul>
+<li>① if (condition) {then-body} [else {else-body}] </li>
+<li>② while (condition) {body} </li>
+<li>③ do {body} while (condition) </li>
+<li>④ for (initialization; condition; increment) {body}<br>与C语言的for结构的语法相同。 </li>
+<li>⑤ break : 跳出包含它的for、while、do-while 循环 </li>
+<li>⑥ continue : 跳过for、while、do-while循环的body的剩余部分，而立刻进行下一次循环的执行。 </li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/linux/">linux</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/awk/">awk</a><a href="/tags/linux/">linux</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://nealgavin.github.io/2015/02/02/awk-introduce/" data-title="awk使用介绍 | Neal Gavin" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/02/06/home/" title="归途">
+  <strong>上一篇：</strong><br/>
+  <span>
+  归途</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/01/23/MarkDown/"  title="MarkDown语法">
+ <strong>下一篇：</strong><br/> 
+ <span>MarkDown语法
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/02/02/awk-introduce/" data-title="awk使用介绍" data-url="http://nealgavin.github.io/2015/02/02/awk-introduce/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#内置数值函数"><span class="toc-number">1.</span> <span class="toc-text">内置数值函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义函数"><span class="toc-number">2.</span> <span class="toc-text">自定义函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#awk_script的组成:"><span class="toc-number"></span> <span class="toc-text">awk_script的组成:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#awk命令的一般形式:"><span class="toc-number"></span> <span class="toc-text">awk命令的一般形式:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#awk的运行过程:"><span class="toc-number"></span> <span class="toc-text">awk的运行过程:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#action"><span class="toc-number"></span> <span class="toc-text">action</span></a>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/linux/" title="linux">linux<sup>2</sup></a></li>
+		
+			<li><a href="/categories/生活/" title="生活">生活<sup>4</sup></a></li>
+		
+			<li><a href="/categories/编程/" title="编程">编程<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/吐嘈/" title="吐嘈">吐嘈<sup>2</sup></a></li>
+		
+			<li><a href="/tags/DNSpod/" title="DNSpod">DNSpod<sup>1</sup></a></li>
+		
+			<li><a href="/tags/树莓派/" title="树莓派">树莓派<sup>1</sup></a></li>
+		
+			<li><a href="/tags/fight/" title="fight">fight<sup>1</sup></a></li>
+		
+			<li><a href="/tags/awk/" title="awk">awk<sup>1</sup></a></li>
+		
+			<li><a href="/tags/linux/" title="linux">linux<sup>1</sup></a></li>
+		
+			<li><a href="/tags/MarkDown/" title="MarkDown">MarkDown<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://blog.csdn.net/nealgavin" target="_blank" title="my CSDN blog">my CSDN blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://darkrhythm.net" target="_blank" title="群神的blog">Pira&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Neal Gavin,working in Baidu.living in beijing. <br/>
+			This is my blog.It&#39;s my pleasure to share!</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/1273004732" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/nealgavin" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:nealgavin@126.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Pacman">Jacman</a> © 2015 
+		
+		<a href="http://nealgavin.github.io/about" target="_blank" title="nealgavin">nealgavin</a>
+		
+		</p>
+
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"nealgavin"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+  </body>
+</html>
