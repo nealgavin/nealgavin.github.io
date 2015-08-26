@@ -10,8 +10,7 @@
     <meta name="author" content="nealgavin">
     
     <meta name="description" content="今天把玩了一下树莓派，就顺带写个文章供新手作参考了。
-#安装准备
-
+安装准备
 SD卡
 Raspberry Pi
 显示器
@@ -21,8 +20,7 @@ Raspberry Pi
     
     
     <meta name="description" content="今天把玩了一下树莓派，就顺带写个文章供新手作参考了。
-#安装准备
-
+安装准备
 SD卡
 Raspberry Pi
 显示器
@@ -34,8 +32,7 @@ Raspberry Pi
 <meta property="og:url" content="http://nealgavin.github.io/2015/04/03/raspberry/index.html">
 <meta property="og:site_name" content="Neal Gavin">
 <meta property="og:description" content="今天把玩了一下树莓派，就顺带写个文章供新手作参考了。
-#安装准备
-
+安装准备
 SD卡
 Raspberry Pi
 显示器
@@ -45,12 +42,11 @@ Raspberry Pi
 <meta property="og:image" content="http://7xif4j.com1.z0.glb.clouddn.com/gavinQQ图片20150403194152.png">
 <meta property="og:image" content="http://7xif4j.com1.z0.glb.clouddn.com/gavinP50403-140211.jpg">
 <meta property="og:image" content="http://7xif4j.com1.z0.glb.clouddn.com/gavinP50403-150810.jpg">
-<meta property="og:updated_time" content="2015-08-15T03:42:37.000Z">
+<meta property="og:updated_time" content="2015-08-23T08:46:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="raspberry 的安装流程">
 <meta name="twitter:description" content="今天把玩了一下树莓派，就顺带写个文章供新手作参考了。
-#安装准备
-
+安装准备
 SD卡
 Raspberry Pi
 显示器
@@ -160,13 +156,12 @@ var _hmt = _hmt || [];
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装准备"><span class="toc-number">1.</span> <span class="toc-text">安装准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#介绍"><span class="toc-number">1.1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#连接显示器"><span class="toc-number">1.2.</span> <span class="toc-text">连接显示器</span></a></li></ol></li></ol>
 		
 		</div>
 		
 		<p>今天把玩了一下树莓派，就顺带写个文章供新手作参考了。</p>
-<p>#安装准备</p>
-<ol>
+<h1 id="安装准备">安装准备</h1><ol>
 <li>SD卡</li>
 <li>Raspberry Pi</li>
 <li>显示器</li>
@@ -175,9 +170,9 @@ var _hmt = _hmt || [];
 <li>鼠标</li>
 </ol>
 <a id="more"></a>
-<p>##介绍<br>其实树莓派本身可以看成是电脑主板，只是还自带了CPU，GPU，内存条<br>因此SD卡的作用就是电脑中的硬盘的作用。装上系统，插上显示器，鼠标，键盘就成了迷你的电脑了。自然也有很好的扩展性，可接电视等各种设备。</p>
+<h2 id="介绍">介绍</h2><p>其实树莓派本身可以看成是电脑主板，只是还自带了CPU，GPU，内存条<br>因此SD卡的作用就是电脑中的硬盘的作用。装上系统，插上显示器，鼠标，键盘就成了迷你的电脑了。自然也有很好的扩展性，可接电视等各种设备。</p>
 <p>##系统安装<br>用Win32DiskImager把系统镜像写入SD卡，插入<strong>Raspberry Pi</strong>直接启动就可以自动安装了。<br>Win32DiskImager和系统请点击<a href="http://pan.baidu.com/s/1c0nPftI" target="_blank" rel="external">这里</a>我这里用的系统是<strong>2015-02-16-raspbian-wheezy</strong><br>你们自然也可以选用其它的系统来完成。<br>win32DiskImager向SD卡写数据 <img src="http://7xif4j.com1.z0.glb.clouddn.com/gavinQQ图片20150403194152.png" alt="pic"></p>
-<p>##连接显示器<br>我接的是LG的大显示器，需要修改配置，在配置里加入两行代码</p>
+<h2 id="连接显示器">连接显示器</h2><p>我接的是LG的大显示器，需要修改配置，在配置里加入两行代码</p>
 <pre><code>hdmi_mode=<span class="number">9</span>    <span class="number">800</span>x600   <span class="number">60</span>Hz 
 hdmi_ignore_edid=<span class="number">0xa5000080</span>
 </code></pre><p>你们可以根据自身情况作参考，否则显示器显示不出任何东西。<br>之后连接各种设备，<img src="http://7xif4j.com1.z0.glb.clouddn.com/gavinP50403-140211.jpg" alt="pic"><br><img src="http://7xif4j.com1.z0.glb.clouddn.com/gavinP50403-150810.jpg" alt="pic"><br>之后，系统就自己安装好了。期间点击一次重启就好了。因为是英国人设计的所以要改下键盘设置，<br>键盘设置请参考<a href="http://blog.csdn.net/c80486/article/details/8460271" target="_blank" rel="external">这里</a></p>
@@ -252,7 +247,7 @@ hdmi_ignore_edid=<span class="number">0xa5000080</span>
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装准备"><span class="toc-number">1.</span> <span class="toc-text">安装准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#介绍"><span class="toc-number">1.1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#连接显示器"><span class="toc-number">1.2.</span> <span class="toc-text">连接显示器</span></a></li></ol></li></ol>
  
   </div>
 
@@ -288,6 +283,8 @@ hdmi_ignore_edid=<span class="number">0xa5000080</span>
 		
 			<li><a href="/tags/树莓派/" title="树莓派">树莓派<sup>1</sup></a></li>
 		
+			<li><a href="/tags/think/" title="think">think<sup>1</sup></a></li>
+		
 			<li><a href="/tags/fight/" title="fight">fight<sup>1</sup></a></li>
 		
 			<li><a href="/tags/awk/" title="awk">awk<sup>1</sup></a></li>
@@ -295,8 +292,6 @@ hdmi_ignore_edid=<span class="number">0xa5000080</span>
 			<li><a href="/tags/linux/" title="linux">linux<sup>1</sup></a></li>
 		
 			<li><a href="/tags/MarkDown/" title="MarkDown">MarkDown<sup>1</sup></a></li>
-		
-			<li><a href="/tags/think/" title="think">think<sup>1</sup></a></li>
 		
 		</ul>
 </div>
