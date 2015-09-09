@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Neal Gavin]]></title>
-  <subtitle><![CDATA[Keep on going! Believe in yourself!]]></subtitle>
+  
   <link href="/atom.xml" rel="self"/>
-  <link href="http://nealgavin.github.io/"/>
-  <updated>2015-08-23T08:49:40.000Z</updated>
-  <id>http://nealgavin.github.io/</id>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-09-06T12:28:06.000Z</updated>
+  <id>http://yoursite.com/</id>
   
   <author>
-    <name><![CDATA[nealgavin]]></name>
+    <name><![CDATA[Neal Gavin]]></name>
     <email><![CDATA[nealgavin@126.com]]></email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[画生活]]></title>
+    <link href="http://yoursite.com/2015/09/06/life-draw/"/>
+    <id>http://yoursite.com/2015/09/06/life-draw/</id>
+    <published>2015-09-06T12:13:15.000Z</published>
+    <updated>2015-09-06T12:28:06.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="哲学三问">哲学三问</h1><p>我是谁？<br>我从哪里来？<br>我要到哪里去？</p>
+<h1 id="快速决策">快速决策</h1><p><strong> 要有自己的原则 </strong>，以生活为中心，一切的行为是为了生活的更美好。<br>1）健康的身体<br>2）充足的知识<br>3）计划型生活</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="哲学三问">哲学三问</h1><p>我是谁？<br>我从哪里来？<br>我要到哪里去？</p>
+<h1 id="快速决策">快速决策</h1><p><strong> 要有自己的原则 </strong>，以生活为中心，一切的行为是为了生活的更美好。<br>1）健康的]]>
+    </summary>
+    
+      <category term="think" scheme="http://yoursite.com/tags/think/"/>
+    
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[乱谈问题]]></title>
-    <link href="http://nealgavin.github.io/2015/08/12/qs-and-analyze/"/>
-    <id>http://nealgavin.github.io/2015/08/12/qs-and-analyze/</id>
+    <link href="http://yoursite.com/2015/08/12/qs-and-analyze/"/>
+    <id>http://yoursite.com/2015/08/12/qs-and-analyze/</id>
     <published>2015-08-12T12:00:44.000Z</published>
     <updated>2015-08-23T08:49:40.000Z</updated>
     <content type="html"><![CDATA[<h1 id="问题的来源">问题的来源</h1><p>什么生<strong>问题</strong>?问题按我的理解就是你想做达到某种结果，但是在这个过程中总有各种障碍，这些就是问题所在！<br><a id="more"></a></p>
@@ -31,16 +51,16 @@
     
     </summary>
     
-      <category term="think" scheme="http://nealgavin.github.io/tags/think/"/>
+      <category term="think" scheme="http://yoursite.com/tags/think/"/>
     
-      <category term="think" scheme="http://nealgavin.github.io/categories/think/"/>
+      <category term="think" scheme="http://yoursite.com/categories/think/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[10公里战斗]]></title>
-    <link href="http://nealgavin.github.io/2015/08/10/my-10km-fight/"/>
-    <id>http://nealgavin.github.io/2015/08/10/my-10km-fight/</id>
+    <link href="http://yoursite.com/2015/08/10/my-10km-fight/"/>
+    <id>http://yoursite.com/2015/08/10/my-10km-fight/</id>
     <published>2015-08-10T14:13:37.000Z</published>
     <updated>2015-08-15T03:42:37.000Z</updated>
     <content type="html"><![CDATA[<p>上周末Summer Party，非常霸气的一标打中红心，斩获了头巾一块。<br><a id="more"></a><br><img src="http://d.pcs.baidu.com/thumbnail/4c2b8a02f1d3fe75e19694d47851f131?fid=3239644437-250528-242018121182369&amp;time=1439211600&amp;sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-EVEZEt5QCPD1vDPtl0EUoW3ZQBE%3D&amp;rt=sh&amp;expires=2h&amp;r=741943344&amp;sharesign=unknown&amp;size=c710_u500&amp;quality=100" alt=""></p>
@@ -55,16 +75,16 @@
     
     </summary>
     
-      <category term="fight" scheme="http://nealgavin.github.io/tags/fight/"/>
+      <category term="fight" scheme="http://yoursite.com/tags/fight/"/>
     
-      <category term="生活" scheme="http://nealgavin.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[raspberry 的安装流程]]></title>
-    <link href="http://nealgavin.github.io/2015/04/03/raspberry/"/>
-    <id>http://nealgavin.github.io/2015/04/03/raspberry/</id>
+    <link href="http://yoursite.com/2015/04/03/raspberry/"/>
+    <id>http://yoursite.com/2015/04/03/raspberry/</id>
     <published>2015-04-03T11:20:07.000Z</published>
     <updated>2015-08-23T08:46:50.000Z</updated>
     <content type="html"><![CDATA[<p>今天把玩了一下树莓派，就顺带写个文章供新手作参考了。</p>
@@ -102,16 +122,16 @@ hdmi_ignore_edid=<span class="number">0xa5000080</span>
     
     </summary>
     
-      <category term="树莓派" scheme="http://nealgavin.github.io/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+      <category term="树莓派" scheme="http://yoursite.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
     
-      <category term="linux" scheme="http://nealgavin.github.io/categories/linux/"/>
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[归途]]></title>
-    <link href="http://nealgavin.github.io/2015/02/06/home/"/>
-    <id>http://nealgavin.github.io/2015/02/06/home/</id>
+    <link href="http://yoursite.com/2015/02/06/home/"/>
+    <id>http://yoursite.com/2015/02/06/home/</id>
     <published>2015-02-06T10:24:04.000Z</published>
     <updated>2015-08-23T08:49:12.000Z</updated>
     <content type="html"><![CDATA[<p>已经快一年没有回去了，真的好怀念南方的日子。南方的天气，南方的习俗，南方的口味。<br><a id="more"></a><br>北京，无数青年为之疯狂的帝都，又称之为魔都。人口拥挤不堪，生活压力大，但也有着无数的机遇，这是年轻人所追求的东西。这里承载着无数青年的梦想，能来帝都，说实在还真是比较偶然。因为我向来反感帝都的环境，灰蒙蒙的天空，让人有种生化危机的感觉。13号地铁是所有上班族的恶梦，清早的地铁门口能排满近20米的人！看着情景都感觉疯狂。</p>
@@ -125,16 +145,16 @@ hdmi_ignore_edid=<span class="number">0xa5000080</span>
     
     </summary>
     
-      <category term="吐嘈" scheme="http://nealgavin.github.io/tags/%E5%90%90%E5%98%88/"/>
+      <category term="吐嘈" scheme="http://yoursite.com/tags/%E5%90%90%E5%98%88/"/>
     
-      <category term="生活" scheme="http://nealgavin.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[awk使用介绍]]></title>
-    <link href="http://nealgavin.github.io/2015/02/02/awk-introduce/"/>
-    <id>http://nealgavin.github.io/2015/02/02/awk-introduce/</id>
+    <link href="http://yoursite.com/2015/02/02/awk-introduce/"/>
+    <id>http://yoursite.com/2015/02/02/awk-introduce/</id>
     <published>2015-02-02T07:22:42.000Z</published>
     <updated>2015-08-23T08:46:12.000Z</updated>
     <content type="html"><![CDATA[<h1 id="AWK介绍">AWK介绍</h1><p>AWK是一种优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。这种编程及数据操作语言（其名称得自于它的创始人阿尔佛雷德·艾侯、彼得·温伯格和布莱恩·柯林汉姓氏的首个字母）的最大功能取决于一个人所拥有的知识。</p>
@@ -240,18 +260,18 @@ END { actions }
     
     </summary>
     
-      <category term="awk" scheme="http://nealgavin.github.io/tags/awk/"/>
+      <category term="awk" scheme="http://yoursite.com/tags/awk/"/>
     
-      <category term="linux" scheme="http://nealgavin.github.io/tags/linux/"/>
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
     
-      <category term="linux" scheme="http://nealgavin.github.io/categories/linux/"/>
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[MarkDown语法]]></title>
-    <link href="http://nealgavin.github.io/2015/01/23/MarkDown/"/>
-    <id>http://nealgavin.github.io/2015/01/23/MarkDown/</id>
+    <link href="http://yoursite.com/2015/01/23/MarkDown/"/>
+    <id>http://yoursite.com/2015/01/23/MarkDown/</id>
     <published>2015-01-23T07:46:54.000Z</published>
     <updated>2015-08-23T08:48:50.000Z</updated>
     <content type="html"><![CDATA[<h1 id="基本概念">基本概念</h1><p><strong>MarkDown</strong>的目标是实现易读易写，高逼格。<br>像非前端专业人员，总是想着能够用简单的方式来达到前端专业的的展现水准，也就是所谓的<code>Text-&gt;HTML</code>的映射关系。令人欣慰的是<strong>MarkDown</strong>就是这样的一种语言。用 <strong>MarkDown</strong>可以 简洁，大方，优雅的完成这一功能。</p>
@@ -358,16 +378,16 @@ END { actions }
     
     </summary>
     
-      <category term="MarkDown" scheme="http://nealgavin.github.io/tags/MarkDown/"/>
+      <category term="MarkDown" scheme="http://yoursite.com/tags/MarkDown/"/>
     
-      <category term="编程" scheme="http://nealgavin.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[博客开拍]]></title>
-    <link href="http://nealgavin.github.io/2015/01/22/%E5%8D%9A%E5%AE%A2%E5%BC%80%E6%8B%8D/"/>
-    <id>http://nealgavin.github.io/2015/01/22/博客开拍/</id>
+    <link href="http://yoursite.com/2015/01/22/%E5%8D%9A%E5%AE%A2%E5%BC%80%E6%8B%8D/"/>
+    <id>http://yoursite.com/2015/01/22/博客开拍/</id>
     <published>2015-01-22T08:57:52.000Z</published>
     <updated>2015-08-23T08:47:29.000Z</updated>
     <content type="html"><![CDATA[<h2 id="序">序</h2><p>  博客开拍了，今天去买了个info的域名，本想买个10年8年的，奈何此域名越到后面，单价涨的太快，买不起啊！只能先买个1年，等等哪天有钱了，多续点吧！<a href="nealgavin.info">nealgaivn.info</a>这个域名还是很喜欢的！<br><a id="more"></a></p>
@@ -378,16 +398,16 @@ END { actions }
     
     </summary>
     
-      <category term="DNSpod" scheme="http://nealgavin.github.io/tags/DNSpod/"/>
+      <category term="DNSpod" scheme="http://yoursite.com/tags/DNSpod/"/>
     
-      <category term="生活" scheme="http://nealgavin.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[新blog搭起的第一篇]]></title>
-    <link href="http://nealgavin.github.io/2015/01/21/%E6%96%B0blog%E6%90%AD%E8%B5%B7%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
-    <id>http://nealgavin.github.io/2015/01/21/新blog搭起的第一篇/</id>
+    <link href="http://yoursite.com/2015/01/21/%E6%96%B0blog%E6%90%AD%E8%B5%B7%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    <id>http://yoursite.com/2015/01/21/新blog搭起的第一篇/</id>
     <published>2015-01-21T06:50:54.000Z</published>
     <updated>2015-08-23T08:50:42.000Z</updated>
     <content type="html"><![CDATA[<h2 id="起因">起因</h2><p>上周末看到<a href="http://darkrhythm.net/" target="_blank" rel="external">群神</a>高大上的blog，瞬间很是仰慕，感觉这才像是个真正的blog。就向<a href="http://darkrhythm.net/" target="_blank" rel="external">群神</a>请教了下blog的搭建。经过两天的努力，终于把这个blog给搞起来了，呵呵！<br><a id="more"></a></p>
@@ -402,9 +422,9 @@ END { actions }
     
     </summary>
     
-      <category term="吐嘈" scheme="http://nealgavin.github.io/tags/%E5%90%90%E5%98%88/"/>
+      <category term="吐嘈" scheme="http://yoursite.com/tags/%E5%90%90%E5%98%88/"/>
     
-      <category term="生活" scheme="http://nealgavin.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   

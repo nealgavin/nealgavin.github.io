@@ -2,57 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://nealgavin.github.io/2015/01/21/%E6%96%B0blog%E6%90%AD%E8%B5%B7%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/</loc>
+    <loc>http://yoursite.com/2015/09/06/life-draw/</loc>
+    <lastmod>2015-09-06T12:28:06.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/01/21/%E6%96%B0blog%E6%90%AD%E8%B5%B7%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/</loc>
     <lastmod>2015-08-23T08:50:42.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://nealgavin.github.io/2015/08/12/qs-and-analyze/</loc>
+    <loc>http://yoursite.com/2015/08/12/qs-and-analyze/</loc>
     <lastmod>2015-08-23T08:49:40.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://nealgavin.github.io/2015/02/06/home/</loc>
+    <loc>http://yoursite.com/2015/02/06/home/</loc>
     <lastmod>2015-08-23T08:49:12.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://nealgavin.github.io/2015/01/23/MarkDown/</loc>
+    <loc>http://yoursite.com/2015/01/23/MarkDown/</loc>
     <lastmod>2015-08-23T08:48:50.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://nealgavin.github.io/2015/01/22/%E5%8D%9A%E5%AE%A2%E5%BC%80%E6%8B%8D/</loc>
+    <loc>http://yoursite.com/2015/01/22/%E5%8D%9A%E5%AE%A2%E5%BC%80%E6%8B%8D/</loc>
     <lastmod>2015-08-23T08:47:29.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://nealgavin.github.io/2015/04/03/raspberry/</loc>
+    <loc>http://yoursite.com/2015/04/03/raspberry/</loc>
     <lastmod>2015-08-23T08:46:50.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://nealgavin.github.io/2015/02/02/awk-introduce/</loc>
+    <loc>http://yoursite.com/2015/02/02/awk-introduce/</loc>
     <lastmod>2015-08-23T08:46:12.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://nealgavin.github.io/2015/08/10/my-10km-fight/</loc>
+    <loc>http://yoursite.com/2015/08/10/my-10km-fight/</loc>
     <lastmod>2015-08-15T03:42:37.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://nealgavin.github.io/Lab/index.html</loc>
+    <loc>http://yoursite.com/search/index.html</loc>
     <lastmod>2015-08-15T03:42:37.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://nealgavin.github.io/search/index.html</loc>
+    <loc>http://yoursite.com/about/index.html</loc>
     <lastmod>2015-08-15T03:42:37.000Z</lastmod>
   </url>
   
   <url>
-    <loc>http://nealgavin.github.io/about/index.html</loc>
+    <loc>http://yoursite.com/Lab/index.html</loc>
     <lastmod>2015-08-15T03:42:37.000Z</lastmod>
   </url>
   
